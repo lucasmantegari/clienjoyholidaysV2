@@ -20,9 +20,7 @@ CREATE TABLE llx_clienjoyholidaysv2_voyage(
 	ref varchar(128) NOT NULL, 
 	label varchar(255), 
 	amount double DEFAULT NULL, 
-	qty real, 
 	fk_soc integer, 
-	fk_project integer, 
 	description text, 
 	note_public text, 
 	note_private text, 
@@ -33,9 +31,8 @@ CREATE TABLE llx_clienjoyholidaysv2_voyage(
 	last_main_doc varchar(255), 
 	import_key varchar(14), 
 	model_pdf varchar(255), 
-	status integer NOT NULL, 
 	date_depart datetime, 
 	date_retour datetime, 
-	fk_pays integer
+	fk_pays integer NOT NULL
 	-- END MODULEBUILDER FIELDS
 ) ENGINE=innodb;

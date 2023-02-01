@@ -18,37 +18,38 @@
 #
 
 # Module label 'ModuleClienjoyholidaysV2Name'
-ModuleClienjoyholidaysV2Name = ClienjoyholidaysV2
+ModuleClienjoyholidaysV2Name    = ClienjoyholidaysV2
+
 # Module description 'ModuleClienjoyholidaysV2Desc'
-ModuleClienjoyholidaysV2Desc = ClienjoyholidaysV2 description
+ModuleClienjoyholidaysV2Desc    = ClienjoyholidaysV2 description
+ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
 
 #
 # Admin page
 #
-ClienjoyholidaysV2Setup = ClienjoyholidaysV2 setup
-Settings = Settings
-ClienjoyholidaysV2SetupPage = ClienjoyholidaysV2 setup page
-CLIENJOYHOLIDAYSV2_MYPARAM1 = My param 1
-CLIENJOYHOLIDAYSV2_MYPARAM1Tooltip = My param 1 tooltip
-CLIENJOYHOLIDAYSV2_MYPARAM2=My param 2
-CLIENJOYHOLIDAYSV2_MYPARAM2Tooltip=My param 2 tooltip
+ClienjoyholidaysV2Setup                 = Paramètrage de ClienjoyholidaysV2
+Settings                                = Paramètres
+ClienjoyholidaysV2SetupPage             = Page de configuration de ClienjoyholidaysV2
+
 
 
 #
 # About page
 #
-About = About
-ClienjoyholidaysV2About = About ClienjoyholidaysV2
-ClienjoyholidaysV2AboutPage = ClienjoyholidaysV2 about page
+About                           = About
+ClienjoyholidaysV2About         = About ClienjoyholidaysV2
+ClienjoyholidaysV2AboutPage     = ClienjoyholidaysV2 about page
 
 #
 # Sample page
 #
-ClienjoyholidaysV2Area = Acceuil ClienjoyholidaysV2
-MyPageName = My page name
+
+DateDepart                  = Date de départ
+DateRetour                  = Date de retour
 
 #
 # Sample widget
 #
-MyWidget = My widget
-MyWidgetDescription = My widget description
+MyWidget                    = My widget
+MyWidgetDescription         = My widget description
+Create                      = Créer
