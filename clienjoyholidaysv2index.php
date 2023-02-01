@@ -103,7 +103,7 @@ $formfile = new FormFile($db);
 
 llxHeader("", $langs->trans("ClienjoyholidaysV2Area"));
 
-print load_fiche_titre($langs->trans("ClienjoyholidaysV2Area"), '', 'clienjoyholidaysv2.png@clienjoyholidaysv2');
+print load_fiche_titre($langs->trans("ClienjoyholidaysV2Area"), '', 'clienjoyholidaysv.png@clienjoyholidaysv2');
 
 print '<div class="fichecenter"><div class="fichethirdleft">';
 
