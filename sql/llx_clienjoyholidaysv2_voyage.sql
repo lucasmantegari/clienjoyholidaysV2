@@ -33,6 +33,6 @@ CREATE TABLE llx_clienjoyholidaysv2_voyage(
 	model_pdf varchar(255), 
 	date_depart datetime, 
 	date_retour datetime, 
-	fk_pays integer NOT NULL
+	fk_pays integer
 	-- END MODULEBUILDER FIELDS
 ) ENGINE=innodb;
