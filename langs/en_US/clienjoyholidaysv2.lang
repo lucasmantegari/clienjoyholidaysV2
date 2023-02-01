@@ -21,7 +21,7 @@
 ModuleClienjoyholidaysV2Name    = ClienjoyholidaysV2
 
 # Module description 'ModuleClienjoyholidaysV2Desc'
-ModuleClienjoyholidaysV2Desc    = ClienjoyholidaysV2 description
+ModuleClienjoyholidaysV2Desc    = Gestion de formules de voyages
 ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
 
 #
@@ -36,9 +36,9 @@ CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE    = Tarif par défaut global
 #
 # About page
 #
-About                           = About
-ClienjoyholidaysV2About         = About ClienjoyholidaysV2
-ClienjoyholidaysV2AboutPage     = ClienjoyholidaysV2 about page
+About                           = A propos
+ClienjoyholidaysV2About         = A propos de ClienjoyholidaysV2
+ClienjoyholidaysV2AboutPage     = A propos
 
 #
 # Sample page

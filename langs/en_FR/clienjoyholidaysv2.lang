@@ -1,0 +1,29 @@
+
+#
+# Generic
+#
+
+# Module label 'ModuleClienjoyholidaysV2Name'
+
+# Module description 'ModuleClienjoyholidaysV2Desc'
+M
+#
+# Admin page
+#
+
+
+#
+# About page
+#
+
+#
+# Sample page
+#
+
+
+#
+# Sample widget
+#
+MyWidget                    = My widget
+MyWidgetDescription         = My widget description
+
