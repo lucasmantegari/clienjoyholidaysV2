@@ -359,5 +359,13 @@ class ActionsClienjoyholidaysV2
 		}
 	}
 
-	/* Add here any other hooked methods... */
+	function addMoreActionsButtons(&$parameters, &$object, &$action, $hookmanager){
+		if ($parameters['currentcontext'] == 'propalcard'){
+			print dolGetButtonAction("créer un voyage", "Création voyage", "default", "/dolibarr/htdocs/custom/clienjoyholidaysv2/voyage_card.php?action=create&idmenu=159&mainmenu=clienjoyholidaysv2&leftmenu=&origin=propal");
+		}
+
+	}
+
+
+
 }
