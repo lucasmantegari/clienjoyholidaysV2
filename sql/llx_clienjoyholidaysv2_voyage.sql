@@ -34,6 +34,6 @@ CREATE TABLE llx_clienjoyholidaysv2_voyage(
 	date_depart datetime, 
 	date_retour datetime, 
 	status integer NOT NULL, 
-	fk_pays integer
+	fk_pays integer NOT NULL
 	-- END MODULEBUILDER FIELDS
 ) ENGINE=innodb;

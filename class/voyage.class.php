@@ -131,7 +131,7 @@ class Voyage extends CommonObject
 		'date_depart' => array('type'=>'datetime', 'label'=>'DateDepart', 'enabled'=>'1', 'position'=>500, 'notnull'=>0, 'visible'=>1,),
 		'date_retour' => array('type'=>'datetime', 'label'=>'DateRetour', 'enabled'=>'1', 'position'=>500, 'notnull'=>0, 'visible'=>1,),
 		'status' => array('type'=>'integer', 'label'=>'Status', 'enabled'=>'1', 'position'=>2000, 'notnull'=>1, 'visible'=>0, 'index'=>1, 'arrayofkeyval'=>array('0'=>'Brouillon', '1'=>'Validé', '9'=>'Annulé'), 'validate'=>'1',),
-		'fk_pays' => array('type'=>'integer:Ccountry:core/class/ccountry.class.php', 'label'=>'Pays', 'enabled'=>'1', 'position'=>42, 'notnull'=>0, 'visible'=>1, 'index'=>1, 'validate'=>'1',),
+		'fk_pays' => array('type'=>'integer:Ccountry:core/class/ccountry.class.php', 'label'=>'Pays', 'enabled'=>'1', 'position'=>42, 'notnull'=>1, 'visible'=>1, 'index'=>1, 'validate'=>'1',),
 	);
 	public $rowid;
 	public $ref;
@@ -1101,24 +1101,32 @@ class Voyage extends CommonObject
 		return $error;
 	}
 
+	/**
+	 * Permet de mettre un prix par défaut qui est récupéré dans la table des tarifs en fonction
+	 * du pays si celui ci est renseigné ou récupère le tarif global renseigné dans les conf du
+	 * module si le pays n'est pas renseigné.
+	 *
+	 */
 	public function setDefaultPrice() {
-
 		global $conf;
 
-		if (empty($this->amount) && !empty($this->fk_pays)) {
+		if (empty($this->amount)) {
 			$sql = "SELECT t.prix FROM " . MAIN_DB_PREFIX . "c_clienjoyholidaysv2_tarif as t WHERE t.fk_pays=" . $this->db->escape($this->fk_pays);
 			$resql = $this->db->query($sql);
-			$obj = $this->db->fetch_object($resql);
-			$this->amount = floatval($obj->prix);
-
-		}else{
-			$this->amount = $conf->global->CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE;
+			if(!empty($resql)){
+				$obj = $this->db->fetch_object($resql);
+				$this->amount = floatval($obj->prix);
+				if (empty($this->amount)){
+					$this->amount = $conf->global->CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE;
+				}
+			}else{
+				return -1;
+			}
 		}
-		
-
+		return 1;
 	}
-
 }
+
 
 
 require_once DOL_DOCUMENT_ROOT.'/core/class/commonobjectline.class.php';
