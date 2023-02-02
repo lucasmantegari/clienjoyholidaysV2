@@ -130,6 +130,7 @@ class Voyage extends CommonObject
 		'model_pdf' => array('type'=>'varchar(255)', 'label'=>'Model pdf', 'enabled'=>'1', 'position'=>1010, 'notnull'=>-1, 'visible'=>0,),
 		'date_depart' => array('type'=>'datetime', 'label'=>'DateDepart', 'enabled'=>'1', 'position'=>500, 'notnull'=>0, 'visible'=>1,),
 		'date_retour' => array('type'=>'datetime', 'label'=>'DateRetour', 'enabled'=>'1', 'position'=>500, 'notnull'=>0, 'visible'=>1,),
+		'status' => array('type'=>'integer', 'label'=>'Status', 'enabled'=>'1', 'position'=>2000, 'notnull'=>1, 'visible'=>0, 'index'=>1, 'arrayofkeyval'=>array('0'=>'Brouillon', '1'=>'Valid&eacute;', '9'=>'Annul&eacute;'), 'validate'=>'1',),
 		'fk_pays' => array('type'=>'integer:Ccountry:core/class/ccountry.class.php', 'label'=>'Pays de destination', 'enabled'=>'1', 'position'=>42, 'notnull'=>1, 'visible'=>1, 'index'=>1, 'validate'=>'1',),
 	);
 	public $rowid;
