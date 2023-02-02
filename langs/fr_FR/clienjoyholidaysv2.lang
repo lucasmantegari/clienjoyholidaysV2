@@ -15,10 +15,9 @@ ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
 ClienjoyholidaysV2Setup                 = Paramètrage de ClienjoyholidaysV2
 Settings                                = Paramètres
 ClienjoyholidaysV2SetupPage             = Page de configuration de ClienjoyholidaysV2
-<<<<<<< HEAD
+
 CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE    = Tarif par défaut global
-=======
->>>>>>> a0b2edf9c32e837c694bde38a8f0f71c3c538ead
+
 
 
 
@@ -35,19 +34,13 @@ ClienjoyholidaysV2AboutPage     = A propos de ClienjoyholidaysV2
 
 DateDepart                  = Date de départ
 DateRetour                  = Date de retour
-<<<<<<< HEAD
-
-=======
 Amount                      = Prix
->>>>>>> a0b2edf9c32e837c694bde38a8f0f71c3c538ead
+
 
 #
 # Sample widget
 #
 MyWidget                    = My widget
 MyWidgetDescription         = My widget description
-<<<<<<< HEAD
 Create                      = Créer
-=======
-Create                      = Créer
->>>>>>> a0b2edf9c32e837c694bde38a8f0f71c3c538ead
+
