@@ -1,55 +1,27 @@
-# Copyright (C) 2023 SuperAdmin
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 #
 # Generic
 #
 
 # Module label 'ModuleClienjoyholidaysV2Name'
-ModuleClienjoyholidaysV2Name    = ClienjoyholidaysV2
 
 # Module description 'ModuleClienjoyholidaysV2Desc'
-ModuleClienjoyholidaysV2Desc    = Gestion de formules de voyages
-ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
-
+M
 #
 # Admin page
 #
-ClienjoyholidaysV2Setup                 = Paramètrage de ClienjoyholidaysV2
-Settings                                = Paramètres
-ClienjoyholidaysV2SetupPage             = Page de configuration de ClienjoyholidaysV2
-CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE    = Tarif par défaut global
 
 
 #
 # About page
 #
-About                           = A propos
-ClienjoyholidaysV2About         = A propos de ClienjoyholidaysV2
-ClienjoyholidaysV2AboutPage     = A propos
 
 #
 # Sample page
 #
 
-DateDepart                  = Date de départ
-DateRetour                  = Date de retour
 
 #
 # Sample widget
 #
 MyWidget                    = My widget
 MyWidgetDescription         = My widget description
-Create                      = Créer

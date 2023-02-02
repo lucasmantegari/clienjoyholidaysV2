@@ -374,7 +374,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=clienjoyholidaysv2',
             // This is a Left menu entry
             'type'=>'left',
-            'titre'=>'Liste des formules de voyage',
+            'titre'=>'List voyage',
             'mainmenu'=>'clienjoyholidaysv2',
             'leftmenu'=>'clienjoyholidaysv2_voyage',
             'url'=>'/clienjoyholidaysv2/voyage_list.php',
@@ -394,7 +394,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=clienjoyholidaysv2,fk_leftmenu=clienjoyholidaysv2_voyage',
             // This is a Left menu entry
             'type'=>'left',
-            'titre'=>'Nouveau voyage',
+            'titre'=>'New voyage',
             'mainmenu'=>'clienjoyholidaysv2',
             'leftmenu'=>'clienjoyholidaysv2_voyage',
             'url'=>'/clienjoyholidaysv2/voyage_card.php?action=create',
