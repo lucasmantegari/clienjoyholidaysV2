@@ -9,9 +9,6 @@ ModuleClienjoyholidaysV2Name    = ClienjoyholidaysV2
 ModuleClienjoyholidaysV2Desc    = Gestion de formules de voyages
 ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
 
-New voyage                      = Nouveau voyage
-List voyage                     = Liste des voyages
-
 #
 # Admin page
 #
@@ -21,12 +18,13 @@ ClienjoyholidaysV2SetupPage             = Page de configuration de Clienjoyholid
 CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE    = Tarif par défaut global
 
 
+
 #
 # About page
 #
 About                           = A propos
 ClienjoyholidaysV2About         = A propos de ClienjoyholidaysV2
-ClienjoyholidaysV2AboutPage     = A propos
+ClienjoyholidaysV2AboutPage     = A propos de ClienjoyholidaysV2
 
 #
 # Sample page
@@ -34,6 +32,7 @@ ClienjoyholidaysV2AboutPage     = A propos
 
 DateDepart                  = Date de départ
 DateRetour                  = Date de retour
+
 
 #
 # Sample widget

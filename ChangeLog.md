@@ -6,8 +6,7 @@ via l'interface de paramétrage du module.
  Systeme de tarification en fonction du pays de destination modifiable dans un dictionnaire - 01/02/2023- 2.0.0
 
 ## 1.0
--  NEW : Correction des images et des traductions.
-Ajout de la page de création des formules de voyages. 
-Création de la liste des formules de voyages - 01/02/2023 - 1.0.0
-
+- NEW : Ajout des images et des traductions.
+  Ajout de la page de création des formules de voyages.
+  Création de la liste des formules de voyages - 01/02/2023 - 1.0.0
 
