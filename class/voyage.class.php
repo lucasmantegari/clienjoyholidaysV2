@@ -472,7 +472,6 @@ class Voyage extends CommonObject
 	{
 		$this->setDefaultPrice();
 		return $this->updateCommon($user, $notrigger);
-
 	}
 
 	/**
@@ -1137,7 +1136,7 @@ class VoyageLine extends CommonObjectLine
 	 */
 	public $isextrafieldmanaged = 0;
 
-	/**'status' => array('type'=>'integer', 'label'=>'Status', 'enabled'=>'1', 'position'=>2000, 'notnull'=>1, 'visible'=>1, 'index'=>1, 'arrayofkeyval'=>array('0'=>'Brouillon', '1'=>'Valid&eacute;', '9'=>'Annul&eacute;'), 'validate'=>'1',),
+	/**
 	 * Constructor
 	 *
 	 * @param DoliDb $db Database handler
