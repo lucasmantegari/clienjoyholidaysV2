@@ -359,6 +359,12 @@ class ActionsClienjoyholidaysV2
 		}
 	}
 
+
+	/**
+	 *
+	 *	Permet d'ajouter un nouveau bouton pour créer un voyage depuis une propal
+	 *
+	 */
 	function addMoreActionsButtons($parameters, &$object, &$action, $hookmanager)
 	{
 		if ($parameters['currentcontext'] == "propalcard"){
@@ -367,6 +373,12 @@ class ActionsClienjoyholidaysV2
 
 	}
 
+
+	/**
+	 *
+	 *	Permet de lier le voyage avec la propal
+	 *
+	 */
 	function setLinkedObjectSourceTargetType($parameters, &$object, &$action, $hookmanager)
 	{
 		if($parameters['currentcontext'] == "voyagecard"){
