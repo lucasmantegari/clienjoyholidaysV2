@@ -1,54 +1,35 @@
-# Copyright (C) 2023 SuperAdmin
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 
 #
 # Generic
 #
 
 # Module label 'ModuleClienjoyholidaysV2Name'
-ModuleClienjoyholidaysV2Name = ClienjoyholidaysV2
+
+
 # Module description 'ModuleClienjoyholidaysV2Desc'
-ModuleClienjoyholidaysV2Desc = ClienjoyholidaysV2 description
+
 
 #
 # Admin page
 #
-ClienjoyholidaysV2Setup = ClienjoyholidaysV2 setup
-Settings = Settings
-ClienjoyholidaysV2SetupPage = ClienjoyholidaysV2 setup page
-CLIENJOYHOLIDAYSV2_MYPARAM1 = My param 1
-CLIENJOYHOLIDAYSV2_MYPARAM1Tooltip = My param 1 tooltip
-CLIENJOYHOLIDAYSV2_MYPARAM2=My param 2
-CLIENJOYHOLIDAYSV2_MYPARAM2Tooltip=My param 2 tooltip
+
+
 
 
 #
 # About page
 #
-About = About
-ClienjoyholidaysV2About = About ClienjoyholidaysV2
-ClienjoyholidaysV2AboutPage = ClienjoyholidaysV2 about page
+
 
 #
 # Sample page
 #
-ClienjoyholidaysV2Area = Home ClienjoyholidaysV2
-MyPageName = My page name
+
 
 #
 # Sample widget
 #
-MyWidget = My widget
-MyWidgetDescription = My widget description
+MyWidget                    = My widget
+MyWidgetDescription         = My widget description
+

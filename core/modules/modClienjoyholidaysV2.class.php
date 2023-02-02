@@ -83,7 +83,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
 		// If file is in theme/yourtheme/img directory under name object_pictovalue.png, use this->picto='pictovalue'
 		// If file is in module/img directory under name object_pictovalue.png, use this->picto='pictovalue@module'
 		// To use a supported fa-xxx css style of font awesome, use this->picto='xxx'
-		$this->picto = 'fa-generic';
+		$this->picto = 'fa-plane';
 
 		// Define some features supported by module (triggers, login, substitutions, menus, css, etc...)
 		$this->module_parts = array(
@@ -107,7 +107,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
 			'theme' => 0,
 			// Set this to relative path of css file if module has its own css file
 			'css' => array(
-				//    '/clienjoyholidaysv2/css/clienjoyholidaysv2.css.php',
+				    //'/clienjoyholidaysv2/css/clienjoyholidaysv2.css.php',
 			),
 			// Set this to relative path of js file if module must load a js on all pages
 			'js' => array(
@@ -295,13 +295,14 @@ class modClienjoyholidaysV2 extends DolibarrModules
 			'prefix' => img_picto('', $this->picto, 'class="paddingright pictofixedwidth valignmiddle"'),
 			'mainmenu'=>'clienjoyholidaysv2',
 			'leftmenu'=>'',
-			'url'=>'/clienjoyholidaysv2/clienjoyholidaysv2index.php',
+			'url'=>'/clienjoyholidaysv2/voyage_list.php',
 			'langs'=>'clienjoyholidaysv2@clienjoyholidaysv2', // Lang file to use (without .lang) by module. File must be in langs/code_CODE/ directory.
 			'position'=>1000 + $r,
 			'enabled'=>'isModEnabled("clienjoyholidaysv2")', // Define condition to show or hide menu entry. Use 'isModEnabled("clienjoyholidaysv2")' if entry must be visible if module is enabled.
 			'perms'=>'1', // Use 'perms'=>'$user->hasRight("clienjoyholidaysv2", "voyage", "read")' if you want your menu with a permission rules
 			'target'=>'',
 			'user'=>2, // 0=Menu for internal users, 1=external users, 2=both
+
 		);
 		/* END MODULEBUILDER TOPMENU */
 		/* BEGIN MODULEBUILDER LEFTMENU VOYAGE
@@ -355,7 +356,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=clienjoyholidaysv2',
             // This is a Left menu entry
             'type'=>'left',
-            'titre'=>'List Voyage',
+            'titre'=>'Liste des formules de voyage',
             'mainmenu'=>'clienjoyholidaysv2',
             'leftmenu'=>'clienjoyholidaysv2_voyage',
             'url'=>'/clienjoyholidaysv2/voyage_list.php',
@@ -375,7 +376,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=clienjoyholidaysv2,fk_leftmenu=clienjoyholidaysv2_voyage',
             // This is a Left menu entry
             'type'=>'left',
-            'titre'=>'New Voyage',
+            'titre'=>'Nouveau voyage',
             'mainmenu'=>'clienjoyholidaysv2',
             'leftmenu'=>'clienjoyholidaysv2_voyage',
             'url'=>'/clienjoyholidaysv2/voyage_card.php?action=create',

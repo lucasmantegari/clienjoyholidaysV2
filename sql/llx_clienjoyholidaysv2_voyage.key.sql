@@ -18,9 +18,8 @@
 ALTER TABLE llx_clienjoyholidaysv2_voyage ADD INDEX idx_clienjoyholidaysv2_voyage_rowid (rowid);
 ALTER TABLE llx_clienjoyholidaysv2_voyage ADD INDEX idx_clienjoyholidaysv2_voyage_ref (ref);
 ALTER TABLE llx_clienjoyholidaysv2_voyage ADD INDEX idx_clienjoyholidaysv2_voyage_fk_soc (fk_soc);
-ALTER TABLE llx_clienjoyholidaysv2_voyage ADD INDEX idx_clienjoyholidaysv2_voyage_fk_project (fk_project);
 ALTER TABLE llx_clienjoyholidaysv2_voyage ADD CONSTRAINT llx_clienjoyholidaysv2_voyage_fk_user_creat FOREIGN KEY (fk_user_creat) REFERENCES llx_user(rowid);
-ALTER TABLE llx_clienjoyholidaysv2_voyage ADD INDEX idx_clienjoyholidaysv2_voyage_status (status);
+ALTER TABLE llx_clienjoyholidaysv2_voyage ADD INDEX idx_clienjoyholidaysv2_voyage_fk_pays (fk_pays);
 -- END MODULEBUILDER INDEXES
 
 --ALTER TABLE llx_clienjoyholidaysv2_voyage ADD UNIQUE INDEX uk_clienjoyholidaysv2_voyage_fieldxy(fieldx, fieldy);
