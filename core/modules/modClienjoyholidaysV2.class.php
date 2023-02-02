@@ -72,7 +72,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
 		$this->editor_url = '';
 
 		// Possible values for version are: 'development', 'experimental', 'dolibarr', 'dolibarr_deprecated', 'experimental_deprecated' or a version string like 'x.y.z'
-		$this->version = '2.1.0';
+		$this->version = '2.0.0';
 		// Url to the file with your last numberversion of this module
 		//$this->url_last_version = 'http://www.example.com/versionmodule.txt';
 
@@ -374,7 +374,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=clienjoyholidaysv2',
             // This is a Left menu entry
             'type'=>'left',
-            'titre'=>'List Voyage',
+            'titre'=>'ListTravel',
             'mainmenu'=>'clienjoyholidaysv2',
             'leftmenu'=>'clienjoyholidaysv2_voyage',
             'url'=>'/clienjoyholidaysv2/voyage_list.php',
@@ -394,7 +394,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=clienjoyholidaysv2,fk_leftmenu=clienjoyholidaysv2_voyage',
             // This is a Left menu entry
             'type'=>'left',
-            'titre'=>'New Voyage',
+            'titre'=>'NewTravel',
             'mainmenu'=>'clienjoyholidaysv2',
             'leftmenu'=>'clienjoyholidaysv2_voyage',
             'url'=>'/clienjoyholidaysv2/voyage_card.php?action=create',
