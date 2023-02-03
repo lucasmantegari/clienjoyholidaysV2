@@ -1102,16 +1102,19 @@ class Voyage extends CommonObject
 	}
 
 	/**
+	 *
 	 * Permet de mettre un prix par défaut qui est récupéré dans la table des tarifs en fonction
 	 * du pays si celui ci est renseigné ou récupère le tarif global renseigné dans les conf du
 	 * module si le pays n'est pas renseigné.
+	 *
+	 * @return	int		1 if OK, -1 if KO
 	 *
 	 */
 	public function setDefaultPrice() {
 		global $conf;
 
 		if (empty($this->amount)) {
-			$sql = "SELECT t.prix FROM " . MAIN_DB_PREFIX . "c_clienjoyholidaysv2_tarif as t WHERE t.fk_pays=" . $this->db->escape($this->fk_pays);
+			$sql = "SELECT t.prix FROM " . MAIN_DB_PREFIX . "c_clienjoyholidaysv2_tarif as t WHERE t.active=1 AND t.fk_pays=" . $this->db->escape($this->fk_pays) ;
 			$resql = $this->db->query($sql);
 			if(!empty($resql)){
 				$obj = $this->db->fetch_object($resql);
