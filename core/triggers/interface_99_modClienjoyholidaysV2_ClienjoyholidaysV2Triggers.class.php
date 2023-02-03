@@ -111,12 +111,12 @@ class InterfaceClienjoyholidaysV2Triggers extends DolibarrTriggers
 
 		// Or you can execute some code here
 		switch ($action) {
-			// Users
-			//case 'USER_CREATE':
-			//case 'USER_MODIFY':
-			//case 'USER_NEW_PASSWORD':
-			//case 'USER_ENABLEDISABLE':
-			//case 'USER_DELETE':
+			case 'VOYAGE_CREATE':
+				$origin 		= GETPOST('origin', 'alphanohtml');
+				$origin_id 		= GETPOST('originid', 'int');
+
+				$object->add_object_linked($origin,$origin_id);
+				break;
 
 			// Actions
 			//case 'ACTION_MODIFY':

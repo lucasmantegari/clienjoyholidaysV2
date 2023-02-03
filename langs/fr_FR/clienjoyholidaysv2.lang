@@ -11,6 +11,8 @@ ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
 
 NewTravel                       = Nouveau voyage
 ListTravel                      = Liste des voyages
+travel                          = Voyage
+
 
 #
 # Admin page
@@ -38,7 +40,7 @@ ClienjoyholidaysV2AboutPage     = A propos de ClienjoyholidaysV2
 DateDepart                  = Date de départ
 DateRetour                  = Date de retour
 Amount                      = Prix
-
+createtravel                = Créer un voyage
 
 #
 # Sample widget
@@ -46,4 +48,3 @@ Amount                      = Prix
 MyWidget                    = My widget
 MyWidgetDescription         = My widget description
 Create                      = Créer
-

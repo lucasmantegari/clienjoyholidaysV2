@@ -472,6 +472,7 @@ class Voyage extends CommonObject
 	{
 		$this->setDefaultPrice();
 		return $this->updateCommon($user, $notrigger);
+
 	}
 
 	/**
@@ -1111,6 +1112,7 @@ class Voyage extends CommonObject
 	 *
 	 */
 	public function setDefaultPrice() {
+
 		global $conf;
 
 		if (empty($this->amount)) {
@@ -1128,8 +1130,8 @@ class Voyage extends CommonObject
 		}
 		return 1;
 	}
-}
 
+}
 
 
 require_once DOL_DOCUMENT_ROOT.'/core/class/commonobjectline.class.php';

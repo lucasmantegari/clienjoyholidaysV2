@@ -359,5 +359,40 @@ class ActionsClienjoyholidaysV2
 		}
 	}
 
-	/* Add here any other hooked methods... */
+
+	/**
+	 *
+	 *	Permet d'ajouter un nouveau bouton pour créer un voyage en fonction du contexte de la page
+	 *
+	 * 	@return int 0 if OK
+	 *
+	 */
+	function addMoreActionsButtons($parameters, &$object, &$action, $hookmanager)
+	{
+		global $langs;
+		if ($parameters['currentcontext'] == "propalcard"){
+			print dolGetButtonAction('', $langs->trans('createtravel'), 'default', '/dolibarr/htdocs/custom/clienjoyholidaysv2/voyage_card.php?action=create&idmenu=634&mainmenu=clienjoyholidaysv2&leftmenu=&originid=' . $object->id . '&origin=propal', 'btn-new-travel');
+		}
+		return 0;
+
+	}
+
+
+	/**
+	 *
+	 *	Permet de lier le voyage avec la propal
+	 *
+	 * 	@return int  1 if OK
+	 *
+	 */
+	function setLinkedObjectSourceTargetType($parameters, &$object, &$action, $hookmanager)
+	{
+		if($parameters['currentcontext'] == "voyagecard"){
+			$hookmanager->resArray['targettype'] = "clienjoyholidaysv2_voyage";
+			return 1;
+		}
+
+	}
+
+
 }
