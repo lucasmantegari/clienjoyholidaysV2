@@ -72,7 +72,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
 		$this->editor_url = '';
 
 		// Possible values for version are: 'development', 'experimental', 'dolibarr', 'dolibarr_deprecated', 'experimental_deprecated' or a version string like 'x.y.z'
-		$this->version = '1.0';
+		$this->version = '2.0.0';
 		// Url to the file with your last numberversion of this module
 		//$this->url_last_version = 'http://www.example.com/versionmodule.txt';
 
@@ -200,32 +200,50 @@ class modClienjoyholidaysV2 extends DolibarrModules
 		// 'user'             to add a tab in user view
 
 		// Dictionaries
-		$this->dictionaries = array();
-		/* Example:
+		//$this->dictionaries = array();
+		 Example:
 		$this->dictionaries=array(
 			'langs'=>'clienjoyholidaysv2@clienjoyholidaysv2',
 			// List of tables we want to see into dictonnary editor
-			'tabname'=>array("table1", "table2", "table3"),
+			'tabname'=>array(
+				MAIN_DB_PREFIX."c_clienjoyholidaysv2_tarif",
+			),
 			// Label of tables
-			'tablib'=>array("Table1", "Table2", "Table3"),
+			'tablib'=>array(
+				"Tarif",
+			),
 			// Request to select fields
-			'tabsql'=>array('SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table1 as f', 'SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table2 as f', 'SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table3 as f'),
+			'tabsql'=>array(
+				"SELECT f.rowid as rowid, f.code, f.label as libelle, f.fk_pays as country_id, c.code as country_code, f.prix, f.active, c.label as country, f.active FROM ".MAIN_DB_PREFIX."c_clienjoyholidaysv2_tarif as f, ".MAIN_DB_PREFIX."c_country as c WHERE f.fk_pays=c.rowid and c.active=1"
+			),
 			// Sort order
-			'tabsqlsort'=>array("label ASC", "label ASC", "label ASC"),
+			'tabsqlsort'=>array("country ASC,f.code ASC"),
 			// List of fields (result of select to show dictionary)
-			'tabfield'=>array("code,label", "code,label", "code,label"),
+			'tabfield'=>array(
+				"code,country,prix"
+			),
 			// List of fields (list of fields to edit a record)
-			'tabfieldvalue'=>array("code,label", "code,label", "code,label"),
+			'tabfieldvalue'=>array(
+				"code,country,prix"
+			),
 			// List of fields (list of fields for insert)
-			'tabfieldinsert'=>array("code,label", "code,label", "code,label"),
+			'tabfieldinsert'=>array(
+				"code,fk_pays,prix,label"
+			),
 			// Name of columns with primary key (try to always name it 'rowid')
-			'tabrowid'=>array("rowid", "rowid", "rowid"),
+			'tabrowid'=>array(
+				""
+			),
 			// Condition to show each dictionary
-			'tabcond'=>array($conf->clienjoyholidaysv2->enabled, $conf->clienjoyholidaysv2->enabled, $conf->clienjoyholidaysv2->enabled),
-			// Tooltip for every fields of dictionaries: DO NOT PUT AN EMPTY ARRAY
-			'tabhelp'=>array(array('code'=>$langs->trans('CodeTooltipHelp'), 'field2' => 'field2tooltip'), array('code'=>$langs->trans('CodeTooltipHelp'), 'field2' => 'field2tooltip'), ...),
+			'tabcond'=>array(
+				$conf->clienjoyholidaysv2->enabled
+			),
+
+
+			//'tabhelp'=>array(array('code'=>$langs->trans('CodeTooltipHelp'), 'field2' => 'field2tooltip'), array('code'=>$langs->trans('CodeTooltipHelp'), 'field2' => 'field2tooltip'), ...),
 		);
-		*/
+
+
 
 		// Boxes/Widgets
 		// Add here list of php file(s) stored in clienjoyholidaysv2/core/boxes that contains a class to show a widget.
@@ -356,7 +374,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=clienjoyholidaysv2',
             // This is a Left menu entry
             'type'=>'left',
-            'titre'=>'Liste des formules de voyage',
+            'titre'=>'ListTravel',
             'mainmenu'=>'clienjoyholidaysv2',
             'leftmenu'=>'clienjoyholidaysv2_voyage',
             'url'=>'/clienjoyholidaysv2/voyage_list.php',
@@ -376,7 +394,7 @@ class modClienjoyholidaysV2 extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=clienjoyholidaysv2,fk_leftmenu=clienjoyholidaysv2_voyage',
             // This is a Left menu entry
             'type'=>'left',
-            'titre'=>'Nouveau voyage',
+            'titre'=>'NewTravel',
             'mainmenu'=>'clienjoyholidaysv2',
             'leftmenu'=>'clienjoyholidaysv2_voyage',
             'url'=>'/clienjoyholidaysv2/voyage_card.php?action=create',

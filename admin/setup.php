@@ -96,6 +96,10 @@ if (!class_exists('FormSetup')) {
 
 $formSetup = new FormSetup($db);
 
+// Setup conf CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE
+$item = $formSetup->newItem('CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE');
+$item->nameText = $item->getNameText();
+
 /*
 // HTTP HOST
 $item = $formSetup->newItem('NO_PARAM_JUST_TEXT');

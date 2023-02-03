@@ -3,11 +3,14 @@
 #
 
 # Module label 'ModuleClienjoyholidaysV2Name'
-ModuleClienjoyholidaysV2Name    = ClienjoyholidaysV2
+ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
 
 # Module description 'ModuleClienjoyholidaysV2Desc'
 ModuleClienjoyholidaysV2Desc    = Gestion de formules de voyages
 ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
+
+NewTravel                       = Nouveau voyage
+ListTravel                      = Liste des voyages
 
 #
 # Admin page
@@ -15,6 +18,9 @@ ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
 ClienjoyholidaysV2Setup                 = Paramètrage de ClienjoyholidaysV2
 Settings                                = Paramètres
 ClienjoyholidaysV2SetupPage             = Page de configuration de ClienjoyholidaysV2
+
+CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE    = Tarif par défaut global
+
 
 
 
@@ -33,9 +39,11 @@ DateDepart                  = Date de départ
 DateRetour                  = Date de retour
 Amount                      = Prix
 
+
 #
 # Sample widget
 #
 MyWidget                    = My widget
 MyWidgetDescription         = My widget description
 Create                      = Créer
+

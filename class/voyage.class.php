@@ -130,8 +130,8 @@ class Voyage extends CommonObject
 		'model_pdf' => array('type'=>'varchar(255)', 'label'=>'Model pdf', 'enabled'=>'1', 'position'=>1010, 'notnull'=>-1, 'visible'=>0,),
 		'date_depart' => array('type'=>'datetime', 'label'=>'DateDepart', 'enabled'=>'1', 'position'=>500, 'notnull'=>0, 'visible'=>1,),
 		'date_retour' => array('type'=>'datetime', 'label'=>'DateRetour', 'enabled'=>'1', 'position'=>500, 'notnull'=>0, 'visible'=>1,),
-		'status' => array('type'=>'integer', 'label'=>'Status', 'enabled'=>'1', 'position'=>2000, 'notnull'=>1, 'visible'=>0, 'index'=>1, 'arrayofkeyval'=>array('0'=>'Brouillon', '1'=>'Valid&eacute;', '9'=>'Annul&eacute;'), 'validate'=>'1',),
-		'fk_pays' => array('type'=>'integer:Ccountry:core/class/ccountry.class.php', 'label'=>'Pays de destination', 'enabled'=>'1', 'position'=>42, 'notnull'=>1, 'visible'=>1, 'index'=>1, 'validate'=>'1',),
+		'status' => array('type'=>'integer', 'label'=>'Status', 'enabled'=>'1', 'position'=>2000, 'notnull'=>1, 'visible'=>0, 'index'=>1, 'arrayofkeyval'=>array('0'=>'Brouillon', '1'=>'Validé', '9'=>'Annulé'), 'validate'=>'1',),
+		'fk_pays' => array('type'=>'integer:Ccountry:core/class/ccountry.class.php', 'label'=>'Pays', 'enabled'=>'1', 'position'=>42, 'notnull'=>1, 'visible'=>1, 'index'=>1, 'validate'=>'1',),
 	);
 	public $rowid;
 	public $ref;
@@ -150,6 +150,7 @@ class Voyage extends CommonObject
 	public $model_pdf;
 	public $date_depart;
 	public $date_retour;
+	public $status;
 	public $fk_pays;
 	// END MODULEBUILDER PROPERTIES
 
@@ -242,6 +243,7 @@ class Voyage extends CommonObject
 	 */
 	public function create(User $user, $notrigger = false)
 	{
+		$this->setDefaultPrice();
 		$resultcreate = $this->createCommon($user, $notrigger);
 
 		//$resultvalidate = $this->validate($user, $notrigger);
@@ -468,6 +470,7 @@ class Voyage extends CommonObject
 	 */
 	public function update(User $user, $notrigger = false)
 	{
+		$this->setDefaultPrice();
 		return $this->updateCommon($user, $notrigger);
 	}
 
@@ -1097,7 +1100,36 @@ class Voyage extends CommonObject
 
 		return $error;
 	}
+
+	/**
+	 *
+	 * Permet de mettre un prix par défaut qui est récupéré dans la table des tarifs en fonction
+	 * du pays si celui ci est renseigné ou récupère le tarif global renseigné dans les conf du
+	 * module si le pays n'est pas renseigné.
+	 *
+	 * @return	int		1 if OK, -1 if KO
+	 *
+	 */
+	public function setDefaultPrice() {
+		global $conf;
+
+		if (empty($this->amount)) {
+			$sql = "SELECT t.prix FROM " . MAIN_DB_PREFIX . "c_clienjoyholidaysv2_tarif as t WHERE t.active=1 AND t.fk_pays=" . $this->db->escape($this->fk_pays) ;
+			$resql = $this->db->query($sql);
+			if(!empty($resql)){
+				$obj = $this->db->fetch_object($resql);
+				$this->amount = floatval($obj->prix);
+				if (empty($this->amount)){
+					$this->amount = $conf->global->CLIENJOYHOLIDAYS_TARRIFDEFAUTGLOBALE;
+				}
+			}else{
+				return -1;
+			}
+		}
+		return 1;
+	}
 }
+
 
 
 require_once DOL_DOCUMENT_ROOT.'/core/class/commonobjectline.class.php';
