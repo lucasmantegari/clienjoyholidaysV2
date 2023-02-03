@@ -11,6 +11,7 @@ ModuleClienjoyholidaysV2Name    = Enjoy Holidays V2
 
 NewTravel                       = Nouveau voyage
 ListTravel                      = Liste des voyages
+travel                          = Voyage
 
 #
 # Admin page
