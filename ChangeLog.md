@@ -1,5 +1,9 @@
 # CHANGELOG CLIENJOYHOLIDAYSV2 FOR [DOLIBARR ERP CRM](https://www.dolibarr.org)
 
+## 3.0 
+- NEW : Ajout d'un bouton de création de voyage depuis une fiche propal. Le voyage et la propal 
+sont liés.
+
 ## 2.0
 - NEW : Mise en place d'un système de tarif par défaut global si aucuns pays n'est renseignés modifiable 
 via l'interface de paramétrage du module.
